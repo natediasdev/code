@@ -226,7 +226,7 @@ header ul li a{
 	}
 	
 	header .logo{
-		max-width: 60px;
+		max-width: 50px;
 	}
 	
 	header ul{
@@ -236,7 +236,7 @@ header ul li a{
 	.toggle{
 		position: relative;
 		width: 30px;
-		height:30px;
+		height: 30px;
 		cursor: pointer;
 		background: url(images/menu.png);
 		background-size: 30px;
@@ -244,6 +244,7 @@ header ul li a{
 		background-repeat: no-repeat;
 		filter: invert(1);
 		z-index: 11;
+		transition: 0.3s;
 	}
 	
 	.toggle.active{
@@ -254,10 +255,10 @@ header ul li a{
 		background-position: center;
 		background-repeat: no-repeat;
 	}
-	
+
 	header ul.navigation.active{
 		position: fixed;
-        top: 0;
+		top: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -268,19 +269,26 @@ header ul li a{
         background: #fff;
         z-index: 10;
 	}
-	
+
+	header ul.navigation.active div {
+		position: fixed;
+		text-align: center;
+		width: 100%;
+		bottom: 50%;
+	}
+
 	header ul li a{
 		font-size: 1.5em;
 		margin: 5px 0;
 	}
 	
 	section{
-		padding: 20px 20px 120px;
+		padding: 20px 41px 120px;
 	}
 	
 	.content{
 		flex-direction: column;
-		margin-top: 100px;
+		margin-top: 50px;
 	}
 	
 	.content .textBox h2{
@@ -290,15 +298,17 @@ header ul li a{
 	
 	.content .textBox {
 		max-width: 100%;
+		font-size: 16px;
 	}
 	
 	.content .imgBox{
 		max-width: 100%;
+		padding-right: 0;
 		justify-content: center;
 	}
 	
 	.content .imgBox img{
-		max-width: 300px;
+		max-width: 200px;
 	}
 	
 	.content li img{
@@ -308,11 +318,18 @@ header ul li a{
 	.circle{
 		clip-path: circle(400px at center bottom);
 	}
+
+	.thumb {
+		bottom: 0;
+	}
 	
 	.sci{
-		background: #017143;
+		position: sticky;
+		background: #017143cc;
 		right: 0px;
+		top: 95px;
 		width: 50px;
+		transform: translateY(30px);
 		border-top-left-radius: 5px;
 		border-bottom-left-radius: 5px;
 	}

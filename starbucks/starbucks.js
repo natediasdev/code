@@ -31,7 +31,9 @@ function imgSlider(anything){
 
 function changeCircleColor(color){
     const circle = document.querySelector('.circle');
+    const sci = document.querySelector('.sci');
     circle.style.background = color;
+    sci.style.background = `${color}cc`
 }
 
 function toggleMenu(){
